@@ -32,7 +32,7 @@ do
 done
 
 #Restore extenssion .pdf
-for file in *.
+for file in *
 do
   new_name=`echo $file | cut -d. -f1`
   mv $file $new_name.$EXT
