@@ -41,3 +41,4 @@ sub decode {
 	my $uncomp = uncompress($cmp);
 	print "$uncomp\n";
 }
+ 
