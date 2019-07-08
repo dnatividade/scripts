@@ -1,0 +1,14 @@
+;;;; Bandwith control with simple queue + DHCP_Server ;;;;
+;;;; Script to create a "simple queue" for each IP assigned by DHCP ;;;;
+
+;; /ip/dhcp
+;; dhcp_name
+;; Lease Script (paste script bellow)
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+if ($leaseBound=1) do={
+  /queue simple add max-limit=2M/2M target=$leaseActIP comment=$leaseActMAC
+} else={
+  /queue simple remove [find comment=$leaseActMAC]
+}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
