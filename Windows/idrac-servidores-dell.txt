@@ -1,0 +1,25 @@
+#Author @dnat
+
+OpenManage Server Administrator
+
+
+iDRAC Service Module (iSM) [https://www.dell.com/support/home/pt-br/drivers/driversdetails?driverid=p56f1]
+
+
+SupportAssist
+http://localhost:9099/SupportAssist/resx/login.jsp
+
+
+## remover senha iDrac
+#ative o serviço do Windows WINRM
+
+winrm i iDRACHardReset wmi/root/cimv2/dcim/DCIM_iSMService?InstanceID="iSMExportedFunctions"
+
+## Descobrir IP da iDRAC
+#Instale o Dell OpenManage DRAC Tools
+racadm getniccfg
+
+## Obter a Service Tag via linha de comando
+wmic bios get serialnumber
+
+iDRAC with Lifecycle Controller

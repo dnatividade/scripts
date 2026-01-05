@@ -1,0 +1,5 @@
+#Author @dnat
+
+Instalar impressora HP 1020 do Linux no Windows:
+------------------------------------------------
+http://192.168.20.13:631/printers/Hewlett-Packard-HP-LaserJet-1020
